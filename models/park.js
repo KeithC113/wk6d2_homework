@@ -19,7 +19,14 @@ Park.prototype.removeDinosaurByName = function (dinosaur){
 };
 
 Park.prototype.mostPopularDinosaur = function (){
-
+    let most_popular = 0;
+    for(let i = 0; i < this.dinosaurs.length; i++){
+    if (this.dinosaurs[i].guestsAttractedPerDay >             this.dinosaurs[most_popular].guestsAttractedPerDay){
+      most_popular = i
+    }
+  }
+  return this.dinosaurs[most_popular];
+};
 
 };
 
